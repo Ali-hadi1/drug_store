@@ -47,4 +47,8 @@ class User extends Authenticatable
     public function province(){
         return $this->hasOne(province::class);
     }
+
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
 }

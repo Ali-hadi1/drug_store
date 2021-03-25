@@ -9,6 +9,7 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function register(UserRegisterRequest $Register){
-         User::create($Register->validated());
+        $user =  User::create($Register->validated());
+        $user->profile()->create();
     }
 }
